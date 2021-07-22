@@ -1,0 +1,17 @@
+body {
+  background-image: url("https://cutewallpaperhd.com/wp-content/uploads/2021/03/Wallpapers-Black-HD-1536x864.jpg");
+}
+p {
+  color: silver;
+}
+li {
+  color: red;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+#sign {
+  color: bisque;
+  font-style: italic;
+  font-size: larger;
+  font-family: "Courier New", Courier, monospace;
+}
