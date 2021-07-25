@@ -1,0 +1,26 @@
+.text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+#box-container {
+  width: 90%;
+  position: relative;
+  left: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgb(216, 98, 98);
+}
+.box {
+  background-color: brown;
+  height: 5rem;
+  width: 16.1%;
+  margin: 0.2%;
+}
+.box:hover {
+  opacity: 0.8;
+}
+.box-clicked {
+  background-color: rgb(90, 0, 0);
+}
