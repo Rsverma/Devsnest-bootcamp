@@ -1,8 +1,5 @@
 function list_prop(obj) {
-  var keys = [];
-  for (var key in obj) {
-    keys.push(key);
-  }
+  var keys = Object.keys(obj);
   return keys.join(",");
 }
 // console.log(list_prop({ name: "David Rayy", sclass: "VI", rollno: 12 }));
