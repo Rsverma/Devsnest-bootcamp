@@ -1,0 +1,58 @@
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(46, 36, 36);
+}
+
+#container {
+  width: 40%;
+  align-items: center;
+  padding: 3%;
+  box-shadow: 0 0 10px 2px;
+  border-radius: 10px;
+  background-color: silver;
+}
+
+#answers {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10% 1%;
+  margin-bottom: 5%;
+}
+button {
+  padding: 2% 5%;
+  border-radius: 5px;
+  background-color: rgb(15, 199, 190);
+  border: 2px solid rgb(2, 99, 95);
+  color: white;
+}
+button:hover {
+  border-color: black;
+}
+button.correct {
+  background-color: rgb(77, 182, 74);
+}
+button.wrong {
+  background-color: rgb(240, 29, 29);
+}
+
+#start-btn,
+#next-btn {
+  padding: 1% 5%;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+#controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
