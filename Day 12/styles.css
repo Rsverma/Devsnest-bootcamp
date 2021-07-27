@@ -1,0 +1,72 @@
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(46, 36, 36);
+}
+img {
+  height: 100px;
+}
+#container {
+  width: 40%;
+  align-items: center;
+  padding: 3%;
+  box-shadow: 0 0 10px 2px;
+  border-radius: 10px;
+  background-color: silver;
+  text-align: center;
+  font-family: "comic sans MS", OpenSymbol;
+}
+#text-box {
+  height: 2.5rem;
+  width: 90%;
+  position: relative;
+  border-radius: 10px;
+  text-align: center;
+  border: 0px;
+  box-shadow: 0px 0px 5px;
+}
+#submitbutton {
+  height: 2.65rem;
+  width: 8%;
+  border-radius: 50%;
+  background-color: rgba(204, 204, 204, 0);
+  border: 0;
+  padding: 0%;
+  box-shadow: 0px 0px 3px;
+  font-size: xx-large;
+  font-weight: bold;
+}
+#tasks {
+  margin-top: 1rem;
+  text-align: left;
+}
+button {
+  float: right;
+  height: 100%;
+}
+.task {
+  padding-left: 2%;
+  width: 100%;
+  background-color: aliceblue;
+  height: 2rem;
+  border: 1px solid rgba(61, 61, 61, 0.473);
+  border-radius: 5px;
+}
+
+.doneButton {
+  background-color: rgb(118, 255, 118);
+}
+.deleteButton {
+  background-color: rgba(255, 0, 0, 0.753);
+}
+.completed {
+  text-decoration: line-through red;
+}
+.hide {
+  display: none;
+}
