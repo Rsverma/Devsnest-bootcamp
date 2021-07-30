@@ -1,0 +1,10 @@
+.Card {
+  background-color: rgb(78, 122, 36);
+  margin: 5px 15px;
+  font-weight: bold;
+  box-shadow: 0 0 5px;
+  width: 400px;
+  border-radius: 5px;
+  height: 150px;
+  padding: 5px 10px;
+}
