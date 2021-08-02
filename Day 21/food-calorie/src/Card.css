@@ -1,0 +1,10 @@
+.Card {
+  box-shadow: 0 0 2px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px 0px;
+}
+.Card .btn {
+  margin-right: 20px;
+}
