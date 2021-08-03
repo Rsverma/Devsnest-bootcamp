@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.Form {
+  margin: 20px 0px;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
+.Form input {
+  width: 48%;
+  height: 30px;
+  margin: 1%;
+  text-align: center;
+}
+.Form button {
+  width: 28%;
+  margin: 0.2%;
+}
