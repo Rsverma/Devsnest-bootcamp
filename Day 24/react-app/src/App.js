@@ -1,42 +1,22 @@
 import "./App.css";
 import Nav from "./Nav";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
-import { useCallback, useState } from "react";
-
-const useToggle = (initialState = false) => {
-  const [state, setState] = useState(initialState);
-
-  const toggle = useCallback(() => setState((state) => !state), []);
-
-  return [state, toggle];
-};
+import { useContext } from "react";
+import { LoginContext, LoginProvider } from "./LoginContext";
 
 function App() {
-  const [isLoggedIn, SetIsLoggedIn] = useToggle();
-
   return (
     <div className="App">
       <BrowserRouter>
         <Nav />
+
         <Switch>
-          <Route
-            exact
-            path="/"
-            render={(props) => (
-              <Home isLoggedIn={isLoggedIn} SetIsLoggedIn={SetIsLoggedIn} />
-            )}
-          />
-          <Route path="/about" component={About} />
-          <PrivateRoute
-            path="/profile"
-            component={Profile}
-            isLoggedIn={isLoggedIn}
-          />
-          <PrivateRoute
-            path="/dashboard"
-            component={Dashboard}
-            isLoggedIn={isLoggedIn}
-          />
+          <LoginProvider>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <PrivateRoute path="/profile" component={Profile} />
+            <PrivateRoute path="/dashboard" component={Dashboard} />
+          </LoginProvider>
         </Switch>
       </BrowserRouter>
     </div>
@@ -44,11 +24,12 @@ function App() {
 }
 
 function PrivateRoute(props) {
+  const [isLoggedIn] = useContext(LoginContext);
   return (
     <Route
       path={props.path}
       render={(data) =>
-        props.isLoggedIn ? (
+        isLoggedIn ? (
           <props.component {...data} />
         ) : (
           <Redirect to={{ pathname: "" }} />
@@ -59,13 +40,12 @@ function PrivateRoute(props) {
 }
 
 function Home(props) {
+  const [isLoggedIn, SetIsLoggedIn] = useContext(LoginContext);
   return (
     <div className="Home">
       <h1>Home</h1>
       <h2>If not logged in cant access, Profile & Dashboard</h2>
-      <button onClick={props.SetIsLoggedIn}>
-        {props.isLoggedIn ? "Logout" : "Login"}
-      </button>
+      <button onClick={SetIsLoggedIn}>{isLoggedIn ? "Logout" : "Login"}</button>
     </div>
   );
 }
