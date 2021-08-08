@@ -1,0 +1,27 @@
+body {
+  padding: 0%;
+  margin: 0%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.App {
+  width: 300px;
+}
+
+.App .DataInput {
+  margin: 75px 0px;
+}
+.App input {
+  height: 25px;
+  margin: 2%;
+  text-align: left;
+  width: 100%;
+}
+.App h2 {
+  font-size: 30px;
+}
+.App h4 {
+  font-size: 18px;
+  font-weight: 500;
+}
