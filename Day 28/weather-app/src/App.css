@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0px;
+}
+.form input {
+  padding: 10px;
+}
+.form button {
+  margin: 0px 10px;
+}
